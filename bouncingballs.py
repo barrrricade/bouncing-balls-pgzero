@@ -9,6 +9,7 @@ WIDTH = 800
 HEIGHT = 600
 GRAY = (100,100,120)
 
+BALL_FIELD = 0
 X_FIELD = 1
 Y_FIELD = 2
 
@@ -26,6 +27,7 @@ def on_mouse_down(pos, button):
         x_velo = random.randint(-8, 8)
         balls.append([new_ball, x_velo, y_velo])
 
+# update position of balls
 def update():
     for i, (ball, x_velo, y_velo) in enumerate(balls):
         ball.x += x_velo
@@ -42,7 +44,7 @@ def draw():
     screen.clear()
     screen.fill(GRAY)
     for ball in balls:
-        ball[0].draw()
+        ball[BALL_FIELD].draw()
 
 # Run game
 pgzrun.go()
