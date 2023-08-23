@@ -1,7 +1,6 @@
 import pgzrun
 # https://stackoverflow.com/questions/74817115/resizing-a-sprite-with-pygame-zero
 from pgzhelper import *
-
 import random
 
 # window size
@@ -13,8 +12,7 @@ BALL_FIELD = 0
 X_FIELD = 1
 Y_FIELD = 2
 
-
-balls = []
+balls = [] # Contains an array of a [ball, x_velocity, y_velocity]
 
 # create ball on click
 def on_mouse_down(pos, button):
